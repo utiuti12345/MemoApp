@@ -22,6 +22,7 @@
 		5A27330229AB15A600E05869 /* MemoApp_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A27330129AB15A600E05869 /* MemoApp_Watch_AppTests.swift */; };
 		5A27330C29AB15A600E05869 /* MemoApp_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A27330B29AB15A600E05869 /* MemoApp_Watch_AppUITests.swift */; };
 		5A27330E29AB15A600E05869 /* MemoApp_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A27330D29AB15A600E05869 /* MemoApp_Watch_AppUITestsLaunchTests.swift */; };
+		5A27332629AB245200E05869 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A27332529AB245200E05869 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		5A27330729AB15A600E05869 /* MemoApp Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemoApp Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A27330B29AB15A600E05869 /* MemoApp_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoApp_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		5A27330D29AB15A600E05869 /* MemoApp_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoApp_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A27332529AB245200E05869 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		5A2732EF29AB15A400E05869 /* MemoApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				5A27332429AB23A600E05869 /* Screens */,
 				5A2732F029AB15A400E05869 /* MemoAppApp.swift */,
 				5A2732F229AB15A400E05869 /* ContentView.swift */,
 				5A2732F429AB15A500E05869 /* Assets.xcassets */,
@@ -241,6 +244,14 @@
 				5A27330D29AB15A600E05869 /* MemoApp_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "MemoApp Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		5A27332429AB23A600E05869 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5A27332529AB245200E05869 /* RegisterView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A27332629AB245200E05869 /* RegisterView.swift in Sources */,
 				5A2732F329AB15A400E05869 /* ContentView.swift in Sources */,
 				5A2732F129AB15A400E05869 /* MemoAppApp.swift in Sources */,
 			);
@@ -594,11 +606,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
 			};
 			name = Debug;
 		};
@@ -646,10 +660,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
 			};
 			name = Release;
 		};
@@ -732,7 +748,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -744,6 +760,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
 			};
 			name = Debug;
 		};
@@ -765,7 +782,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,6 +795,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
 			};
 			name = Release;
 		};
