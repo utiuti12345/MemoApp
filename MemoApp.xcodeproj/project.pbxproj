@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0DEFEC29AE3C0A000BCB37 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DEFEB29AE3C0A000BCB37 /* Memo.swift */; };
+		5A0DEFEF29AE3CA0000BCB37 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DEFEE29AE3CA0000BCB37 /* Memo.swift */; };
 		5A2732C929AB15A100E05869 /* MemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2732C829AB15A100E05869 /* MemoAppApp.swift */; };
 		5A2732CB29AB15A100E05869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2732CA29AB15A100E05869 /* ContentView.swift */; };
-		5A2732CD29AB15A400E05869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2732CC29AB15A400E05869 /* Assets.xcassets */; };
-		5A2732D029AB15A400E05869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2732CF29AB15A400E05869 /* Preview Assets.xcassets */; };
 		5A2732DA29AB15A400E05869 /* MemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2732D929AB15A400E05869 /* MemoAppTests.swift */; };
 		5A2732E429AB15A400E05869 /* MemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2732E329AB15A400E05869 /* MemoAppUITests.swift */; };
 		5A2732E629AB15A400E05869 /* MemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2732E529AB15A400E05869 /* MemoAppUITestsLaunchTests.swift */; };
@@ -84,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A0DEFEB29AE3C0A000BCB37 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		5A0DEFEE29AE3CA0000BCB37 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		5A2732C529AB15A100E05869 /* MemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2732C829AB15A100E05869 /* MemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoAppApp.swift; sourceTree = "<group>"; };
 		5A2732CA29AB15A100E05869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0DEFED29AE3C89000BCB37 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DEFEE29AE3CA0000BCB37 /* Memo.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		5A2732BC29AB15A000E05869 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,8 @@
 		5A2732C729AB15A100E05869 /* MemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A41C24729AE4824002E99C4 /* Models */,
+				5A0DEFED29AE3C89000BCB37 /* ViewModels */,
 				5A2732C829AB15A100E05869 /* MemoAppApp.swift */,
 				5A2732CA29AB15A100E05869 /* ContentView.swift */,
 				5A2732CC29AB15A400E05869 /* Assets.xcassets */,
@@ -224,7 +236,7 @@
 		5A2732EF29AB15A400E05869 /* MemoApp Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				5A27332929AB87AC00E05869 /* Models */,
+				5A27332929AB87AC00E05869 /* ViewModels */,
 				5A27332429AB23A600E05869 /* Screens */,
 				5A2732F029AB15A400E05869 /* MemoAppApp.swift */,
 				5A2732F229AB15A400E05869 /* ContentView.swift */,
@@ -273,7 +285,15 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		5A27332929AB87AC00E05869 /* Models */ = {
+		5A27332929AB87AC00E05869 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DEFEB29AE3C0A000BCB37 /* Memo.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5A41C24729AE4824002E99C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -289,7 +309,6 @@
 			buildPhases = (
 				5A2732C129AB15A100E05869 /* Sources */,
 				5A2732C229AB15A100E05869 /* Frameworks */,
-				5A2732C329AB15A100E05869 /* Resources */,
 				5A27331429AB15A600E05869 /* Embed Watch Content */,
 			);
 			buildRules = (
@@ -449,15 +468,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5A2732C329AB15A100E05869 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A2732D029AB15A400E05869 /* Preview Assets.xcassets in Resources */,
-				5A2732CD29AB15A400E05869 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A2732D329AB15A400E05869 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0DEFEF29AE3CA0000BCB37 /* Memo.swift in Sources */,
 				5A2732CB29AB15A100E05869 /* ContentView.swift in Sources */,
 				5A2732C929AB15A100E05869 /* MemoAppApp.swift in Sources */,
 			);
@@ -537,6 +548,7 @@
 				5A27335529AC735F00E05869 /* Persistence.swift in Sources */,
 				5A2732F329AB15A400E05869 /* ContentView.swift in Sources */,
 				5A2732F129AB15A400E05869 /* MemoAppApp.swift in Sources */,
+				5A0DEFEC29AE3C0A000BCB37 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

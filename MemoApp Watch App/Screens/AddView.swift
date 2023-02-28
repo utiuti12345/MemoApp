@@ -14,6 +14,8 @@ struct AddView: View {
     @State private var content = ""
     @FocusState private var fieldIsFocused: Bool
     
+    var memoViewModel = MemoViewModel()
+    
     var body: some View {
         VStack(spacing: 30) {
             TextField("", text: $content)
@@ -43,6 +45,7 @@ struct AddView: View {
             newMemo.updatedAt = Date()
 
             do {
+                self.sendMessage(memo: newMemo)
                 try viewContext.save()
                 clear()
                 presentation.wrappedValue.dismiss()
@@ -52,6 +55,16 @@ struct AddView: View {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
+        }
+    }
+    
+    private func sendMessage(memo: Memo) {
+//        let messages: [String: Any] = ["id":memo.id, "content": memo.content as Any,"createdAt":memo.createdAt as Any, "updatedAt": memo.updatedAt as Any]
+        let messages: [String: Any] = ["content":memo.content, "id":memo.id]
+        print("aaaaaa")
+        // 動物名と絵文字を突っ込んだ配列を送信する
+        self.memoViewModel.session.sendMessage(messages, replyHandler: nil) { (error) in
+            print(error.localizedDescription)
         }
     }
 }
